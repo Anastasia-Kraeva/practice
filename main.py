@@ -17,10 +17,10 @@ DATA_FILE_CSV: str = "dataset.csv"
 
 
 def generate_random_series(
-        n: int = SERIES_SIZE,
-        low: int = RANDOM_LOW,
-        high: int = RANDOM_HIGH,
-        seed: int = RANDOM_SEED
+    n: int = SERIES_SIZE,
+    low: int = RANDOM_LOW,
+    high: int = RANDOM_HIGH,
+    seed: int = RANDOM_SEED
 ) -> pd.Series:
     """
     Генерирует Series из случайных целых чисел
@@ -128,8 +128,8 @@ def print_dataframe_summary(df: pd.DataFrame) -> None:
     print(f"Количество строк: {len(df)}")
     print(f"Количество столбцов: {len(df.columns)}")
     print(f"\nТипы данных:\n{df.dtypes}")
-    print(df.describe())
     print("\n")
+    print(df.describe())
 
 
 def round_to_hundreds(values: pd.Series) -> np.ndarray:
